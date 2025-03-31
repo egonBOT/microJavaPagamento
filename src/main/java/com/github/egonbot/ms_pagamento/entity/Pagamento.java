@@ -31,7 +31,7 @@ public class Pagamento {
     private Status status;
     @Column(nullable = false)
     private Long pedidoId;
-   // @Column(nullable = false)
+    @Column(nullable = false)
     private Long formaDePagamentoId;
 }
 
