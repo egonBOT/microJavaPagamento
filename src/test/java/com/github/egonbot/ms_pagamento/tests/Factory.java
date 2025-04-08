@@ -1,5 +1,6 @@
 package com.github.egonbot.ms_pagamento.tests;
 
+import com.github.egonbot.ms_pagamento.dto.PagamentoDTO;
 import com.github.egonbot.ms_pagamento.entity.Pagamento;
 import com.github.egonbot.ms_pagamento.entity.Status;
 
@@ -10,5 +11,19 @@ public class Factory {
     public static Pagamento createPagamento() {
         Pagamento pagamento = new Pagamento(1L, BigDecimal.valueOf(32.25), " egon", "51555028888", "21/03", "585", Status.CRIADO, 1L, 2L);
         return pagamento;
+    }
+
+    public static PagamentoDTO createPagamentoDTO(){
+
+        Pagamento pagamento = createPagamento();
+        return new PagamentoDTO(pagamento);
+
+    }
+
+    public static PagamentoDTO createNewPagamentoDTO(){
+
+        Pagamento pagamento = createPagamento();
+        pagamento.setId(null);
+        return new PagamentoDTO(pagamento);
     }
 }

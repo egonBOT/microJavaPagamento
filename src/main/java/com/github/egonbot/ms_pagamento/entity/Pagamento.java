@@ -1,9 +1,19 @@
 package com.github.egonbot.ms_pagamento.entity;
 
 
-import jakarta.persistence.*;
-import lombok.*;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 
@@ -12,10 +22,17 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @EqualsAndHashCode(of = "id")
+
+//@Entity
+//@Table(name = "tb_pagamento")
+
 @Entity
 @Table(name = "tb_pagamento")
 public class Pagamento {
 
+//
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
