@@ -1,2 +1,2 @@
-  Projeto de micro service 100% em Java, realiizado na faculdade Fiap.
+  Projeto de micro service 100% em Java, realizado na faculdade Fiap.
   
